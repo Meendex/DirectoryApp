@@ -39,7 +39,10 @@ extension RoomsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if viewModel != nil {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as? RoomsTableViewCell else { return UITableViewCell }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as? RoomsTableViewCell else {
+                return UITableViewCell()
+                
+            }
             if let room = viewModel?.getRoomsModel(index: indexPath.row) {
                 cell.updateData(with: room)
             }
