@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6BA83089-951D-477C-A31C-0236D486313D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37A2950C-203A-41C7-BE4C-4BEC40693FAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DirectoryApp/Rooms/RoomsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(networkManager:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "37A2950C-203A-41C7-BE4C-4BEC40693FAF - ec50ca637b7e3a2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DirectoryApp.RoomsViewModel.__allocating_init(networkManager: DirectoryApp.NetworkManagerActions) -&gt; DirectoryApp.RoomsViewModel"
+                  moduleName = "DirectoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mindaugasbalakauskas/Documents/Training%20IOS/Assignments/DirectoryApp/DirectoryApp/Rooms/RoomsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "37A2950C-203A-41C7-BE4C-4BEC40693FAF - 857484c81b5aeb0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DirectoryApp.RoomsViewModel.init(networkManager: DirectoryApp.NetworkManagerActions) -&gt; DirectoryApp.RoomsViewModel"
+                  moduleName = "DirectoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mindaugasbalakauskas/Documents/Training%20IOS/Assignments/DirectoryApp/DirectoryApp/Rooms/RoomsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "463E7723-DEDD-47C0-90FE-09264AC05F0F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DirectoryApp/Rooms/RoomsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "RoomsViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "463E7723-DEDD-47C0-90FE-09264AC05F0F - 183073767bc804f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DirectoryApp.RoomsViewModel.deinit"
+                  moduleName = "DirectoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mindaugasbalakauskas/Documents/Training%20IOS/Assignments/DirectoryApp/DirectoryApp/Rooms/RoomsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "463E7723-DEDD-47C0-90FE-09264AC05F0F - b24caa6d620c00fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DirectoryApp.RoomsViewModel.__deallocating_deinit"
+                  moduleName = "DirectoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mindaugasbalakauskas/Documents/Training%20IOS/Assignments/DirectoryApp/DirectoryApp/Rooms/RoomsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

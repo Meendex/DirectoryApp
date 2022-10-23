@@ -31,7 +31,7 @@ extension RoomsViewModel: RoomsViewModelIn {
         do {
             let data = try await
             networkManager.getData(from: EndPoints.roomsURL)
-            let parseData = try
+            _ = try
             networkManager.parseJsonData(RoomResponse.self, data: data)
         } catch {
             print(error)
@@ -40,7 +40,6 @@ extension RoomsViewModel: RoomsViewModelIn {
 }
 extension RoomsViewModel: RoomsViewModelOut {
     var roomsRecordCount: Int { return rooms.count}
-    
     func getRoomsModel(index: Int) -> RoomResponse {
         return rooms[index]
     }

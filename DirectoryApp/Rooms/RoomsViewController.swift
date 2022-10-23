@@ -28,7 +28,9 @@ class RoomsViewController: UIViewController {
         bag.insert(cancellable)
         Task {
             await viewModel?.getRoomsAsync()
-            DispatchQueue.main.async {}
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 }
