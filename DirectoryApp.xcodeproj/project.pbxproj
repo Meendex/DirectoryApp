@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		4852535F29057FD70024C161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852535E29057FD70024C161 /* AppDelegate.swift */; };
 		4852536129057FD70024C161 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852536029057FD70024C161 /* SceneDelegate.swift */; };
-		4852536329057FD70024C161 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852536229057FD70024C161 /* ViewController.swift */; };
+		4852536329057FD70024C161 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852536229057FD70024C161 /* RoomsViewController.swift */; };
 		4852536629057FD70024C161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4852536429057FD70024C161 /* Main.storyboard */; };
 		4852536829057FD80024C161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4852536729057FD80024C161 /* Assets.xcassets */; };
 		4852536B29057FD80024C161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4852536929057FD80024C161 /* LaunchScreen.storyboard */; };
 		4852537629057FD80024C161 /* DirectoryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852537529057FD80024C161 /* DirectoryAppTests.swift */; };
 		4852538029057FD80024C161 /* DirectoryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852537F29057FD80024C161 /* DirectoryAppUITests.swift */; };
 		4852538229057FD80024C161 /* DirectoryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852538129057FD80024C161 /* DirectoryAppUITestsLaunchTests.swift */; };
+		4852538F290581E70024C161 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852538E290581E70024C161 /* RoomsTableViewCell.swift */; };
+		48525391290582030024C161 /* RoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48525390290582030024C161 /* RoomsViewModel.swift */; };
+		48525393290582290024C161 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48525392290582290024C161 /* RoomModel.swift */; };
+		48525395290582420024C161 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48525394290582420024C161 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		4852535B29057FD70024C161 /* DirectoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4852535E29057FD70024C161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4852536029057FD70024C161 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4852536229057FD70024C161 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4852536229057FD70024C161 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		4852536529057FD70024C161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4852536729057FD80024C161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4852536A29057FD80024C161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		4852537B29057FD80024C161 /* DirectoryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4852537F29057FD80024C161 /* DirectoryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryAppUITests.swift; sourceTree = "<group>"; };
 		4852538129057FD80024C161 /* DirectoryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4852538E290581E70024C161 /* RoomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewCell.swift; sourceTree = "<group>"; };
+		48525390290582030024C161 /* RoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
+		48525392290582290024C161 /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
+		48525394290582420024C161 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,11 @@
 			children = (
 				4852535E29057FD70024C161 /* AppDelegate.swift */,
 				4852536029057FD70024C161 /* SceneDelegate.swift */,
-				4852536229057FD70024C161 /* ViewController.swift */,
+				4852538E290581E70024C161 /* RoomsTableViewCell.swift */,
+				48525390290582030024C161 /* RoomsViewModel.swift */,
+				4852536229057FD70024C161 /* RoomsViewController.swift */,
+				48525392290582290024C161 /* RoomModel.swift */,
+				48525394290582420024C161 /* NetworkManager.swift */,
 				4852536429057FD70024C161 /* Main.storyboard */,
 				4852536729057FD80024C161 /* Assets.xcassets */,
 				4852536929057FD80024C161 /* LaunchScreen.storyboard */,
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4852536329057FD70024C161 /* ViewController.swift in Sources */,
+				4852536329057FD70024C161 /* RoomsViewController.swift in Sources */,
 				4852535F29057FD70024C161 /* AppDelegate.swift in Sources */,
+				48525393290582290024C161 /* RoomModel.swift in Sources */,
+				48525395290582420024C161 /* NetworkManager.swift in Sources */,
+				4852538F290581E70024C161 /* RoomsTableViewCell.swift in Sources */,
 				4852536129057FD70024C161 /* SceneDelegate.swift in Sources */,
+				48525391290582030024C161 /* RoomsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
