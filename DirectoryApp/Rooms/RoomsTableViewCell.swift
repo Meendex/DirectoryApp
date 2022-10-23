@@ -9,9 +9,19 @@ import UIKit
 
 class RoomsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var createdAtLabel: UILabel!
+    @IBOutlet weak var occupiedLabel: UILabel!
+    @IBOutlet weak var maxOccupancyLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    func updateData(with roomData: RoomResponse) {
+        createdAtLabel.text = roomData.createdAt
+        maxOccupancyLabel.text = String(roomData.maxOccupancy)
+        occupiedLabel.text = String(roomData.isOccupied)
+        idLabel.text = roomData.id
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

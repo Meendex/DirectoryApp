@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="ttW-dB-itS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="ttW-dB-itS" customClass="RoomsTableViewCell" customModule="DirectoryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="96.666664123535156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttW-dB-itS" id="XhQ-PG-E4R">
@@ -74,6 +74,12 @@
                                                 <constraint firstItem="Fi8-I0-fBz" firstAttribute="leading" secondItem="XhQ-PG-E4R" secondAttribute="leading" id="agI-tS-vEG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="createdAtLabel" destination="NdV-AA-Jrk" id="TS0-e0-F3p"/>
+                                            <outlet property="idLabel" destination="yoP-Fk-xgM" id="dHf-7e-6bB"/>
+                                            <outlet property="maxOccupancyLabel" destination="FSz-fg-9HQ" id="bbR-PK-YjC"/>
+                                            <outlet property="occupiedLabel" destination="NdV-AA-Jrk" id="Hk7-OQ-Flr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -87,6 +93,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ow-lI-FYG" secondAttribute="trailing" id="vHI-xD-1Cp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="4ow-lI-FYG" id="Mwl-aj-Tg1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
