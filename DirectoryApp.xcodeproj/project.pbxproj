@@ -13,7 +13,7 @@
 		4852536629057FD70024C161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4852536429057FD70024C161 /* Main.storyboard */; };
 		4852536829057FD80024C161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4852536729057FD80024C161 /* Assets.xcassets */; };
 		4852536B29057FD80024C161 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4852536929057FD80024C161 /* LaunchScreen.storyboard */; };
-		4852537629057FD80024C161 /* DirectoryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852537529057FD80024C161 /* DirectoryAppTests.swift */; };
+		4852537629057FD80024C161 /* PeopleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852537529057FD80024C161 /* PeopleViewModelTests.swift */; };
 		4852538029057FD80024C161 /* DirectoryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852537F29057FD80024C161 /* DirectoryAppUITests.swift */; };
 		4852538229057FD80024C161 /* DirectoryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852538129057FD80024C161 /* DirectoryAppUITestsLaunchTests.swift */; };
 		4852538F290581E70024C161 /* RoomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852538E290581E70024C161 /* RoomsTableViewCell.swift */; };
@@ -26,6 +26,11 @@
 		485253A02905FD280024C161 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852539F2905FD280024C161 /* PeopleTableViewCell.swift */; };
 		485253A22905FD420024C161 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A12905FD420024C161 /* PeopleModel.swift */; };
 		485253A42905FD5E0024C161 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A32905FD5E0024C161 /* PeopleViewModel.swift */; };
+		485253A6290617170024C161 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 485253A5290617170024C161 /* people.json */; };
+		485253A8290617360024C161 /* rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 485253A7290617350024C161 /* rooms.json */; };
+		485253AA290618010024C161 /* FakePeopleNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A9290618010024C161 /* FakePeopleNetworkManager.swift */; };
+		485253AC2906181D0024C161 /* FakeRoomsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253AB2906181D0024C161 /* FakeRoomsNetworkManager.swift */; };
+		485253AE29061A060024C161 /* RoomsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253AD29061A060024C161 /* RoomsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +60,7 @@
 		4852536A29057FD80024C161 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4852536C29057FD80024C161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4852537129057FD80024C161 /* DirectoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4852537529057FD80024C161 /* DirectoryAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryAppTests.swift; sourceTree = "<group>"; };
+		4852537529057FD80024C161 /* PeopleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModelTests.swift; sourceTree = "<group>"; };
 		4852537B29057FD80024C161 /* DirectoryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectoryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4852537F29057FD80024C161 /* DirectoryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryAppUITests.swift; sourceTree = "<group>"; };
 		4852538129057FD80024C161 /* DirectoryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -69,6 +74,11 @@
 		4852539F2905FD280024C161 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		485253A12905FD420024C161 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		485253A32905FD5E0024C161 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		485253A5290617170024C161 /* people.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		485253A7290617350024C161 /* rooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rooms.json; sourceTree = "<group>"; };
+		485253A9290618010024C161 /* FakePeopleNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePeopleNetworkManager.swift; sourceTree = "<group>"; };
+		485253AB2906181D0024C161 /* FakeRoomsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRoomsNetworkManager.swift; sourceTree = "<group>"; };
+		485253AD29061A060024C161 /* RoomsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +145,12 @@
 		4852537429057FD80024C161 /* DirectoryAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				4852537529057FD80024C161 /* DirectoryAppTests.swift */,
+				4852537529057FD80024C161 /* PeopleViewModelTests.swift */,
+				485253AD29061A060024C161 /* RoomsViewModelTests.swift */,
+				485253A5290617170024C161 /* people.json */,
+				485253A7290617350024C161 /* rooms.json */,
+				485253A9290618010024C161 /* FakePeopleNetworkManager.swift */,
+				485253AB2906181D0024C161 /* FakeRoomsNetworkManager.swift */,
 			);
 			path = DirectoryAppTests;
 			sourceTree = "<group>";
@@ -295,6 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485253A8290617360024C161 /* rooms.json in Resources */,
+				485253A6290617170024C161 /* people.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4852537629057FD80024C161 /* DirectoryAppTests.swift in Sources */,
+				485253AA290618010024C161 /* FakePeopleNetworkManager.swift in Sources */,
+				485253AC2906181D0024C161 /* FakeRoomsNetworkManager.swift in Sources */,
+				4852537629057FD80024C161 /* PeopleViewModelTests.swift in Sources */,
+				485253AE29061A060024C161 /* RoomsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
