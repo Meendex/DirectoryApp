@@ -25,7 +25,7 @@ final class PeopleViewModelTests: XCTestCase {
         XCTAssertEqual(0, peopleCount)
         await viewModel.getPeopleAsync()
         peopleCount = viewModel.peopleRecordCount
-        XCTAssertEqual(70, peopleCount)
+        XCTAssertEqual(71, peopleCount)
     }
    
 }
