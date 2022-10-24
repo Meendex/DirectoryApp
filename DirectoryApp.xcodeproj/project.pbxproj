@@ -22,6 +22,10 @@
 		48525395290582420024C161 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48525394290582420024C161 /* NetworkManager.swift */; };
 		48525399290584830024C161 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48525398290584830024C161 /* NetworkError.swift */; };
 		4852539B290584E80024C161 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852539A290584E80024C161 /* EndPoints.swift */; };
+		4852539E2905FCFF0024C161 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852539D2905FCFF0024C161 /* PeopleViewController.swift */; };
+		485253A02905FD280024C161 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852539F2905FD280024C161 /* PeopleTableViewCell.swift */; };
+		485253A22905FD420024C161 /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A12905FD420024C161 /* PeopleModel.swift */; };
+		485253A42905FD5E0024C161 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A32905FD5E0024C161 /* PeopleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		48525394290582420024C161 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		48525398290584830024C161 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		4852539A290584E80024C161 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		4852539D2905FCFF0024C161 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		4852539F2905FD280024C161 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		485253A12905FD420024C161 /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
+		485253A32905FD5E0024C161 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		4852535D29057FD70024C161 /* DirectoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4852539C2905FCD30024C161 /* People */,
 				48525397290584600024C161 /* Networking */,
 				48525396290582A00024C161 /* Rooms */,
 				4852535E29057FD70024C161 /* AppDelegate.swift */,
@@ -159,6 +168,17 @@
 				4852539A290584E80024C161 /* EndPoints.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		4852539C2905FCD30024C161 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				4852539F2905FD280024C161 /* PeopleTableViewCell.swift */,
+				485253A32905FD5E0024C161 /* PeopleViewModel.swift */,
+				4852539D2905FCFF0024C161 /* PeopleViewController.swift */,
+				485253A12905FD420024C161 /* PeopleModel.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,14 +312,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485253A42905FD5E0024C161 /* PeopleViewModel.swift in Sources */,
 				4852536329057FD70024C161 /* RoomsViewController.swift in Sources */,
 				4852539B290584E80024C161 /* EndPoints.swift in Sources */,
 				48525399290584830024C161 /* NetworkError.swift in Sources */,
 				4852535F29057FD70024C161 /* AppDelegate.swift in Sources */,
 				48525393290582290024C161 /* RoomModel.swift in Sources */,
+				4852539E2905FCFF0024C161 /* PeopleViewController.swift in Sources */,
 				48525395290582420024C161 /* NetworkManager.swift in Sources */,
 				4852538F290581E70024C161 /* RoomsTableViewCell.swift in Sources */,
 				4852536129057FD70024C161 /* SceneDelegate.swift in Sources */,
+				485253A02905FD280024C161 /* PeopleTableViewCell.swift in Sources */,
+				485253A22905FD420024C161 /* PeopleModel.swift in Sources */,
 				48525391290582030024C161 /* RoomsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

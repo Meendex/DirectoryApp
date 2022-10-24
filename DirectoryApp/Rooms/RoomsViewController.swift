@@ -13,6 +13,7 @@ class RoomsViewController: UIViewController {
     var viewModel: RoomsViewModel?
     @IBOutlet weak var tableView: UITableView!
     var bag: Set<AnyCancellable> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

@@ -22,17 +22,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="ttW-dB-itS" customClass="RoomsTableViewCell" customModule="DirectoryApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="96.666664123535156"/>
+                                        <rect key="frame" x="0.0" y="50" width="390" height="106.66666412353516"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttW-dB-itS" id="XhQ-PG-E4R">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="96.666664123535156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="106.66666412353516"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fi8-I0-fBz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="96.666666666666671"/>
+                                                    <rect key="frame" x="5" y="5" width="380" height="96.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MM-jC-o0e">
-                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="380" height="20.333333333333332"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.333333333333332" id="ww1-Mc-22w"/>
                                                             </constraints>
@@ -41,7 +41,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdV-AA-Jrk">
-                                                            <rect key="frame" x="0.0" y="25.333333333333336" width="390" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="25.333333333333336" width="380" height="20.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.333333333333336" id="w1T-El-S9K"/>
                                                             </constraints>
@@ -50,7 +50,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSz-fg-9HQ">
-                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="390" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="380" height="20.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20.333333333333336" id="hhQ-xk-bVq"/>
                                                             </constraints>
@@ -59,7 +59,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoP-Fk-xgM">
-                                                            <rect key="frame" x="0.0" y="76" width="390" height="20.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="76" width="380" height="20.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -68,10 +68,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Fi8-I0-fBz" secondAttribute="bottom" id="LQL-Bu-8yC"/>
-                                                <constraint firstAttribute="trailing" secondItem="Fi8-I0-fBz" secondAttribute="trailing" id="M7c-qS-3uN"/>
-                                                <constraint firstItem="Fi8-I0-fBz" firstAttribute="top" secondItem="XhQ-PG-E4R" secondAttribute="top" id="Mab-QC-Ih6"/>
-                                                <constraint firstItem="Fi8-I0-fBz" firstAttribute="leading" secondItem="XhQ-PG-E4R" secondAttribute="leading" id="agI-tS-vEG"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fi8-I0-fBz" secondAttribute="bottom" constant="5" id="LQL-Bu-8yC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fi8-I0-fBz" secondAttribute="trailing" constant="5" id="M7c-qS-3uN"/>
+                                                <constraint firstItem="Fi8-I0-fBz" firstAttribute="top" secondItem="XhQ-PG-E4R" secondAttribute="top" constant="5" id="Mab-QC-Ih6"/>
+                                                <constraint firstItem="Fi8-I0-fBz" firstAttribute="leading" secondItem="XhQ-PG-E4R" secondAttribute="leading" constant="5" id="agI-tS-vEG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -105,7 +105,7 @@
         <!--People-->
         <scene sceneID="sJi-A1-PFo">
             <objects>
-                <viewController id="i2u-9P-oWC" sceneMemberID="viewController">
+                <viewController id="i2u-9P-oWC" customClass="PeopleViewController" customModule="DirectoryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6Q-6v-OFi">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" rowHeight="136" id="0fV-ud-dMj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" rowHeight="136" id="0fV-ud-dMj" customClass="PeopleTableViewCell" customModule="DirectoryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0fV-ud-dMj" id="glc-VH-74w">
@@ -195,6 +195,16 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="zrW-Vs-K0A" secondAttribute="trailing" constant="5" id="nb9-tg-xFJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="pFG-wJ-Qkr" id="cNt-mR-4gQ"/>
+                                            <outlet property="createdAtLabel" destination="ufQ-OB-Itr" id="rhD-Da-vnc"/>
+                                            <outlet property="emailLabel" destination="yRt-pq-7Be" id="EsH-U6-XQZ"/>
+                                            <outlet property="favoriteColorLabel" destination="qmG-vq-Ppz" id="Qj6-hp-JIu"/>
+                                            <outlet property="firstNameLabel" destination="Val-pX-bYr" id="vH3-I5-V0g"/>
+                                            <outlet property="idLabel" destination="0i5-tJ-YIz" id="aV6-8H-RqJ"/>
+                                            <outlet property="jobtitleLabel" destination="iTy-Aw-tzz" id="Bfi-xe-Lj5"/>
+                                            <outlet property="lastNameLabel" destination="EgE-NB-uSA" id="bf8-m2-T4P"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -203,6 +213,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="People" image="person.3.fill" catalog="system" id="BiN-b9-dch"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vhh-Ds-Fxg" id="opH-QX-bjm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfU-ke-nw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
