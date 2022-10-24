@@ -23,7 +23,7 @@ final class PeopleViewModel {
     private var imagesDownloadInProgress: [Int: Bool] = [:]
     private let networkManager: NetworkManagerActions
     
-    init(networkManager: NetworkManagerActions) {
+    init(networkManager: NetworkManagerActions = NetworkManager()) {
         self.networkManager = networkManager
     }
 }
@@ -32,8 +32,8 @@ extension PeopleViewModel: PeopleViewModelIn {
         do {
             let data = try await
             networkManager.getData(from: EndPoints.peopleURL)
-            _ = try
-            networkManager.parseJsonData(PeopleRespose.self, data: data)
+            peopleList = try
+            networkManager.parseJsonData([PeopleRespose].self, data: data)
         } catch {
             print(error)
         }

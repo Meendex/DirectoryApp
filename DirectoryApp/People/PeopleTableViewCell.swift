@@ -40,12 +40,12 @@ class PeopleTableViewCell: UITableViewCell {
         idLabel.text = "ID: "
     }
     func updateDisplayData(with model: PeopleRespose) {
-        createdAtLabel.text = model.createdAt
-        firstNameLabel.text = model.firstName
-        lastNameLabel.text = model.lastName
-        emailLabel.text = model.email
-        jobtitleLabel.text = model.jobtitle
-        favoriteColorLabel.text = model.favouriteColor
-        idLabel.text = model.id
+        createdAtLabel.text = "Created: " + model.createdAt
+        firstNameLabel.text = "First Name: " + model.firstName
+        lastNameLabel.text = "Last Name: " + model.lastName
+        emailLabel.text = "E-mail: " + model.email
+        jobtitleLabel.text = "Job Title:" + model.jobtitle
+        favoriteColorLabel.text = "Favorite Color: " + model.favouriteColor
+        idLabel.text = "ID: " + model.id
     }
 }

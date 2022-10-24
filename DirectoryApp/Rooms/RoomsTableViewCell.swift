@@ -9,7 +9,8 @@ import UIKit
 
 class RoomsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var createdAtLabel: UILabel!
+
+    @IBOutlet var createdAtLabel: UILabel!
     @IBOutlet weak var occupiedLabel: UILabel!
     @IBOutlet weak var maxOccupancyLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
@@ -18,10 +19,10 @@ class RoomsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     func updateData(with roomData: RoomResponse) {
-        createdAtLabel.text = roomData.createdAt
-        maxOccupancyLabel.text = String(roomData.maxOccupancy)
-        occupiedLabel.text = String(roomData.isOccupied)
-        idLabel.text = roomData.id
+        createdAtLabel.text = "Created: " + roomData.createdAt
+        maxOccupancyLabel.text = "Max Occupancy: " + String(roomData.maxOccupancy)
+        occupiedLabel.text = "Occupied: " +  String(roomData.isOccupied)
+        idLabel.text = "Room ID: " + roomData.id
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -22,7 +22,7 @@ final class RoomsViewModel {
     @Published var rooms: [RoomResponse] = []
     private let networkManager: NetworkManagerActions
     
-    init(networkManager: NetworkManagerActions) {
+    init(networkManager: NetworkManagerActions = NetworkManager()) {
         self.networkManager = networkManager
     }
 }
@@ -31,8 +31,8 @@ extension RoomsViewModel: RoomsViewModelIn {
         do {
             let data = try await
             networkManager.getData(from: EndPoints.roomsURL)
-            _ = try
-            networkManager.parseJsonData(RoomResponse.self, data: data)
+            rooms = try
+            networkManager.parseJsonData([RoomResponse].self, data: data)
         } catch {
             print(error)
         }
