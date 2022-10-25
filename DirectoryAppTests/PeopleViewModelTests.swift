@@ -10,7 +10,7 @@ import XCTest
 
 final class PeopleViewModelTests: XCTestCase {
 
-    let networkManager = FakePeopleNetworkManager()
+    let networkManager = FakeNetworkManager()
     var viewModel: PeopleViewModel!
     
     override func setUpWithError() throws {
@@ -23,6 +23,7 @@ final class PeopleViewModelTests: XCTestCase {
     func testGetPeopleAsync() async {
         var peopleCount = viewModel.peopleRecordCount
         XCTAssertEqual(0, peopleCount)
+      //  networkManager.mockUrl = "people"
         await viewModel.getPeopleAsync()
         peopleCount = viewModel.peopleRecordCount
         XCTAssertEqual(71, peopleCount)

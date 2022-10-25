@@ -10,7 +10,7 @@ import XCTest
 
 final class RoomsViewModelTests: XCTestCase {
 
-    let networkManager = FakeRoomsNetworkManager()
+    let networkManager = FakeNetworkManager()
     var viewModel: RoomsViewModel!
     
     override func setUpWithError() throws {
@@ -20,12 +20,22 @@ final class RoomsViewModelTests: XCTestCase {
     override func tearDownWithError() throws {
        
     }
-    func testGetPeopleAsync() async {
+    func testGetPeopleAsyncSuccess() async {
         var roomsCount = viewModel.roomsRecordCount
         XCTAssertEqual(0, roomsCount)
+        networkManager.mockUrl = ""
         await viewModel.getRoomsAsync()
         roomsCount = viewModel.roomsRecordCount
         XCTAssertEqual(65, roomsCount)
+    }
+    
+    func testGetPeopleAsyncFailure() async {
+        var roomsCount = viewModel.roomsRecordCount
+        XCTAssertEqual(0, roomsCount)
+        networkManager.mockUrl = ""
+        await viewModel.getRoomsAsync()
+        roomsCount = viewModel.roomsRecordCount
+        XCTAssertEqual(0, roomsCount)
     }
    
 }

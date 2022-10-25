@@ -37,13 +37,11 @@ class PeopleTableViewCell: UITableViewCell {
         favoriteColorLabel.text = "Favorite Colour: "
         
     }
-    func updateDisplayData(with model: PeopleRespose) {
-        createdAtLabel.text = "Joined at: " + model.createdAt
-        firstNameLabel.text = "Full name: " + model.firstName + " " + model.lastName
-        
+    func updateDisplayData(with model: PeopleDetails) {
+        createdAtLabel.text =  model.joinedAt
+        firstNameLabel.text = model.fullName
         emailLabel.text = model.email
-        jobtitleLabel.text = "Title: " + model.jobtitle
-        favoriteColorLabel.text = "Favorite colour: " + model.favouriteColor
-        
+        jobtitleLabel.text =  model.jobTitle
+        favoriteColorLabel.text = model.favouriteColor
     }
 }

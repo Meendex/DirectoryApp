@@ -20,16 +20,16 @@ class PeopleViewController: UIViewController {
         
         Task {
             await viewModel.getPeopleAsync()
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
         }
         
-        let cancellable = viewModel.$peopleList.sink(receiveValue: { _ in
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        })
+        let cancellable = viewModel.$peopleDetails.receive(on: RunLoop.main).sink { _ in
+            self.tableView.reloadData()
+
+        }
+//        let cancellable = viewModel.$peopleList.sink(receiveValue: { _ in
+//            DispatchQueue.main.async {
+//            }
+//        })
         
         bag.insert(cancellable)
 
@@ -37,22 +37,21 @@ class PeopleViewController: UIViewController {
 }
 extension PeopleViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.peopleRecordCount 
+        return viewModel.peopleRecordCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath) as? PeopleTableViewCell else {
             return UITableViewCell()
         }
-            let people = viewModel.getPeopleModel(index: indexPath.row)
-            cell.updateDisplayData(with: people)
-            Task {
-                let imageData = await viewModel.getPeopleImage(for: indexPath.row)
-                if let imageData = imageData {
-                    cell.avatarImageView.image = UIImage(data: imageData)
-                }
-            }
+        let people = viewModel.getPeopleModel(index: indexPath.row)
+        cell.updateDisplayData(with: people)
         
+        viewModel.getPeopleImage(for: indexPath.row) { imageData in
+            DispatchQueue.main.async {
+                cell.avatarImageView.image = UIImage(data: imageData)
+            }
+        }
         return cell
     }
 }

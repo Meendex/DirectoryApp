@@ -28,9 +28,10 @@
 		485253A42905FD5E0024C161 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A32905FD5E0024C161 /* PeopleViewModel.swift */; };
 		485253A6290617170024C161 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 485253A5290617170024C161 /* people.json */; };
 		485253A8290617360024C161 /* rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 485253A7290617350024C161 /* rooms.json */; };
-		485253AA290618010024C161 /* FakePeopleNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A9290618010024C161 /* FakePeopleNetworkManager.swift */; };
-		485253AC2906181D0024C161 /* FakeRoomsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253AB2906181D0024C161 /* FakeRoomsNetworkManager.swift */; };
+		485253AA290618010024C161 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253A9290618010024C161 /* FakeNetworkManager.swift */; };
 		485253AE29061A060024C161 /* RoomsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253AD29061A060024C161 /* RoomsViewModelTests.swift */; };
+		485253B12907EB7A0024C161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253B02907EB7A0024C161 /* Constants.swift */; };
+		485253B32907EBE20024C161 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485253B22907EBE20024C161 /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +77,10 @@
 		485253A32905FD5E0024C161 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		485253A5290617170024C161 /* people.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
 		485253A7290617350024C161 /* rooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rooms.json; sourceTree = "<group>"; };
-		485253A9290618010024C161 /* FakePeopleNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePeopleNetworkManager.swift; sourceTree = "<group>"; };
-		485253AB2906181D0024C161 /* FakeRoomsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRoomsNetworkManager.swift; sourceTree = "<group>"; };
+		485253A9290618010024C161 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 		485253AD29061A060024C161 /* RoomsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModelTests.swift; sourceTree = "<group>"; };
+		485253B02907EB7A0024C161 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		485253B22907EBE20024C161 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		4852535D29057FD70024C161 /* DirectoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				485253AF2907EB5B0024C161 /* Utility */,
 				4852539C2905FCD30024C161 /* People */,
 				48525397290584600024C161 /* Networking */,
 				48525396290582A00024C161 /* Rooms */,
@@ -149,8 +152,7 @@
 				485253AD29061A060024C161 /* RoomsViewModelTests.swift */,
 				485253A5290617170024C161 /* people.json */,
 				485253A7290617350024C161 /* rooms.json */,
-				485253A9290618010024C161 /* FakePeopleNetworkManager.swift */,
-				485253AB2906181D0024C161 /* FakeRoomsNetworkManager.swift */,
+				485253A9290618010024C161 /* FakeNetworkManager.swift */,
 			);
 			path = DirectoryAppTests;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 				48525394290582420024C161 /* NetworkManager.swift */,
 				48525398290584830024C161 /* NetworkError.swift */,
 				4852539A290584E80024C161 /* EndPoints.swift */,
+				485253B22907EBE20024C161 /* JsonParser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -194,6 +197,14 @@
 				485253A12905FD420024C161 /* PeopleModel.swift */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		485253AF2907EB5B0024C161 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				485253B02907EB7A0024C161 /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,8 @@
 				4852538F290581E70024C161 /* RoomsTableViewCell.swift in Sources */,
 				4852536129057FD70024C161 /* SceneDelegate.swift in Sources */,
 				485253A02905FD280024C161 /* PeopleTableViewCell.swift in Sources */,
+				485253B32907EBE20024C161 /* JsonParser.swift in Sources */,
+				485253B12907EB7A0024C161 /* Constants.swift in Sources */,
 				485253A22905FD420024C161 /* PeopleModel.swift in Sources */,
 				48525391290582030024C161 /* RoomsViewModel.swift in Sources */,
 			);
@@ -349,8 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				485253AA290618010024C161 /* FakePeopleNetworkManager.swift in Sources */,
-				485253AC2906181D0024C161 /* FakeRoomsNetworkManager.swift in Sources */,
+				485253AA290618010024C161 /* FakeNetworkManager.swift in Sources */,
 				4852537629057FD80024C161 /* PeopleViewModelTests.swift in Sources */,
 				485253AE29061A060024C161 /* RoomsViewModelTests.swift in Sources */,
 			);

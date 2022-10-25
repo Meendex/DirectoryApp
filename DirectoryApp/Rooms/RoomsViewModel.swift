@@ -17,7 +17,7 @@ protocol RoomsViewModelOut {
     func getRoomsModel(index: Int) -> RoomResponse
 }
 
-final class RoomsViewModel {
+final class RoomsViewModel: JsonParser {
     
     @Published var rooms: [RoomResponse] = []
     private let networkManager: NetworkManagerActions
@@ -28,13 +28,21 @@ final class RoomsViewModel {
 }
 extension RoomsViewModel: RoomsViewModelIn {
     func getRoomsAsync() async {
+        
+        guard let url = URL(string: EndPoints.roomsURL) else {
+            print("Invalid URl")
+            // Handle error
+            return
+        }
         do {
             let data = try await
-            networkManager.getData(from: EndPoints.roomsURL)
+            networkManager.getData(from:url)
             rooms = try
-            networkManager.parseJsonData([RoomResponse].self, data: data)
+           parseJsonData([RoomResponse].self, data: data)
         } catch {
             print(error)
+            rooms = []
+            // Handle error
         }
     }
 }
