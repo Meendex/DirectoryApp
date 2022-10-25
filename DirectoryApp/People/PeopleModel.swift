@@ -11,7 +11,6 @@ struct PeopleRespose: Decodable {
     let createdAt, firstName: String
     let avatar: String
     let lastName, email, jobtitle, favouriteColor: String
-    let id: String
     let data: DataClass?
     let to, fromName: String?
 }

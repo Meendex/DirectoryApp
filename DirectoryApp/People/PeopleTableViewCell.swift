@@ -28,7 +28,7 @@ class PeopleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     override func prepareForReuse() {
-        avatarImageView.image = nil
+        avatarImageView.image = UIImage(named: "default")
         createdAtLabel.text = "Created: "
         firstNameLabel.text = "First Name: "
         
