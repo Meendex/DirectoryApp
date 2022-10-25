@@ -14,11 +14,20 @@ final class PeopleViewModelTests: XCTestCase {
     var viewModel: PeopleViewModel!
     
     override func setUpWithError() throws {
-        viewModel = PeopleViewModel(networkManager: NetworkManager())
+        viewModel = PeopleViewModel(networkManager: networkManager)
     }
 
     override func tearDownWithError() throws {
        
+    }
+    
+    func testGetPeopleAsyncFailure() async {
+        var peopleCount = viewModel.peopleRecordCount
+        XCTAssertEqual(0, peopleCount)
+        networkManager.mockUrl = "test"
+        await viewModel.getPeopleAsync()
+        peopleCount = viewModel.peopleRecordCount
+        XCTAssertEqual(0, peopleCount)
     }
     func testGetPeopleAsyncSuccess() async {
         var peopleCount = viewModel.peopleRecordCount
@@ -28,12 +37,7 @@ final class PeopleViewModelTests: XCTestCase {
         peopleCount = viewModel.peopleRecordCount
         XCTAssertEqual(71, peopleCount)
     }
-    func testGetPeopleAsyncFailure() async {
-        var peopleCount = viewModel.peopleRecordCount
-        XCTAssertEqual(0, peopleCount)
-        networkManager.mockUrl = ""
-        await viewModel.getPeopleAsync()
-        peopleCount = viewModel.peopleRecordCount
-        XCTAssertEqual(0, peopleCount)
-    }
+    
+   
+   
 }

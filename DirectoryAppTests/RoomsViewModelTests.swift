@@ -14,12 +14,22 @@ final class RoomsViewModelTests: XCTestCase {
     var viewModel: RoomsViewModel!
     
     override func setUpWithError() throws {
-        viewModel = RoomsViewModel(networkManager: NetworkManager())
+        viewModel = RoomsViewModel(networkManager: networkManager)
     }
 
     override func tearDownWithError() throws {
        
     }
+    
+    func testGetPeopleAsyncFailure() async {
+        var roomsCount = viewModel.roomsRecordCount
+        XCTAssertEqual(0, roomsCount)
+        networkManager.mockUrl = "test"
+        await viewModel.getRoomsAsync()
+        roomsCount = viewModel.roomsRecordCount
+        XCTAssertEqual(0, roomsCount)
+    }
+    
     func testGetPeopleAsyncSuccess() async {
         var roomsCount = viewModel.roomsRecordCount
         XCTAssertEqual(0, roomsCount)
@@ -28,14 +38,5 @@ final class RoomsViewModelTests: XCTestCase {
         roomsCount = viewModel.roomsRecordCount
         XCTAssertEqual(65, roomsCount)
     }
-    
-    func testGetPeopleAsyncFailure() async {
-        var roomsCount = viewModel.roomsRecordCount
-        XCTAssertEqual(0, roomsCount)
-        networkManager.mockUrl = ""
-        await viewModel.getRoomsAsync()
-        roomsCount = viewModel.roomsRecordCount
-        XCTAssertEqual(0, roomsCount)
-    }
-   
+       
 }

@@ -12,7 +12,7 @@ class FakeNetworkManager: NetworkManagerActions {
     
     var mockUrl: String = ""
     func getData(from url: URL) async throws -> Data {
-        if let url = Bundle.main.url(forResource: mockUrl, withExtension: "json") {
+        if let url = Bundle(for: FakeNetworkManager.self).url(forResource: mockUrl, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 return data
