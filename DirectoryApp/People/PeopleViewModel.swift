@@ -43,8 +43,7 @@ extension PeopleViewModel: PeopleViewModelIn {
     func getPeopleAsync() async {
         do {
             guard let url = URL(string: EndPoints.peopleURL) else {
-                print("Invalid URl")
-                // Handle error
+                print(NetworkError.invalidURL)
                 return
             }
             let data = try await

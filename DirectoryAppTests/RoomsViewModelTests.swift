@@ -23,7 +23,7 @@ final class RoomsViewModelTests: XCTestCase {
     func testGetPeopleAsyncSuccess() async {
         var roomsCount = viewModel.roomsRecordCount
         XCTAssertEqual(0, roomsCount)
-        networkManager.mockUrl = ""
+        networkManager.mockUrl = "rooms"
         await viewModel.getRoomsAsync()
         roomsCount = viewModel.roomsRecordCount
         XCTAssertEqual(65, roomsCount)

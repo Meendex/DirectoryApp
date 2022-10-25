@@ -20,13 +20,20 @@ final class PeopleViewModelTests: XCTestCase {
     override func tearDownWithError() throws {
        
     }
-    func testGetPeopleAsync() async {
+    func testGetPeopleAsyncSuccess() async {
         var peopleCount = viewModel.peopleRecordCount
         XCTAssertEqual(0, peopleCount)
-      //  networkManager.mockUrl = "people"
+        networkManager.mockUrl = "people"
         await viewModel.getPeopleAsync()
         peopleCount = viewModel.peopleRecordCount
         XCTAssertEqual(71, peopleCount)
     }
-   
+    func testGetPeopleAsyncFailure() async {
+        var peopleCount = viewModel.peopleRecordCount
+        XCTAssertEqual(0, peopleCount)
+        networkManager.mockUrl = ""
+        await viewModel.getPeopleAsync()
+        peopleCount = viewModel.peopleRecordCount
+        XCTAssertEqual(0, peopleCount)
+    }
 }

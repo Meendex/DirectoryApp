@@ -28,6 +28,6 @@ struct DataClass: Decodable {
 
 extension PeopleRespose {
     func toPeopleDetails(dateFormatter: DateFormatter) -> PeopleDetails {
-        PeopleDetails(joinedAt: self.createdAt.formatDate(dateFormatter, inputFormate: Constants.inputDateFormat, outputFormate: Constants.outputDateFormat), fullName:self.firstName + " " + self.lastName , avatar: self.avatar, email: self.email, favouriteColor: "Favorite colour: " + self.favouriteColor, jobTitle: self.jobtitle)
+        PeopleDetails(joinedAt: self.createdAt.formatDate(dateFormatter, inputFormate: Constants.inputDateFormat, outputFormate: Constants.outputDateFormat), fullName:self.firstName + " " + self.lastName , avatar: self.avatar, email: self.email, favouriteColor: Constants.favoriteColour + self.favouriteColor, jobTitle: self.jobtitle)
     }
 }
